@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --hibiscus: #b94951;
+  --toadstool: #b82731;
+  --stizza: #870b0c;
+  --dark: #111;
+  --stone: #3D4351;
+  --grey: #999;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--dark);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: url('/bg.png');
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.site-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+a, a:hover, a:focus {
+  color: var(--toadstool);
+  font-weight: 500;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  background: url('/petals.png') left bottom no-repeat;
+  font-size: 2.25rem;
+  line-height: 1;
+  padding: 0 0 0 120px;
+  margin: 0 0 25px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+h2 {
+  color: var(--hibiscus);
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+ul, ol {
+  padding-left: .8rem;
+  width: 100%;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+button, .button {
+  display: inline-block;
+  border: 2px solid var(--stizza);
+  padding: .8em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--stizza);
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.25s;
+}
+button:focus,
+.button:focus,
+button:focus-visible,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  color: #fff;
+}
+button:hover, .button:hover,
+button:focus:hover, 
+.button:focus:hover {
+  color: var(--stizza);
+  background-color: #fff;
+}
+button:disabled,
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+select {
+  appearance: none;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M3,111.67,247.67,418.4c4,5.06,12.6,5.06,16.65,0L509,111.64a15.21,15.21,0,0,0,2.2-13.9,14.2,14.2,0,0,0-1-2.32,10.66,10.66,0,0,0-9.39-5.62H11.14a10.64,10.64,0,0,0-9.38,5.62,13.93,13.93,0,0,0-1,2.27A15.26,15.26,0,0,0,3,111.67Z'/%3E%3C/svg%3E") 95% center no-repeat;
+  background-size: 1rem 1rem;
+  border: 2px solid var(--stizza);
+  border-radius: 0;
+}
+svg.icon {
+  height: 1.6rem;
+  width: 1.5rem;
+}
+
+svg.icon-lg {
+  height: 2rem;
+  width: 2rem;
+}
+
+button svg.icon,
+.button svg.icon {
+  fill: white;
+}
+
+
+button:hover svg.icon,
+.button:hover svg.icon {
+  fill: var(--stizza);
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+    body {
+        background-image: url('/bg_2x.png');
+        background-size: 48px 48px;
+    }
+}
+
+@media (min-width: 1536px) {
+  .site-container {
+    max-width: 1536px;
+  }
+}
