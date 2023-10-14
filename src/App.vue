@@ -80,7 +80,7 @@ const styleThreeData = [
     character: 'Inori Yuzuriha',
     demoUrl: 'http://vizune.com',
     downloadUrl: 'http://vizune.com',
-    asset: 'https://placehold.co/750x375.png',
+    asset: '/thumbnail.jpg',
   },
   {
     title: 'Template: Chie',
