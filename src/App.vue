@@ -48,7 +48,7 @@ const styleTwoData = [
   {
     title: 'Render 001: Guilty Crown',
     imageDimensions: '800 x 1200',
-    asset: 'https://placehold.co/768x400.png',
+    asset: 'https://placehold.co/465x262.png',
     fileSize: '1.2 MB',
     publishDate: '13/10/2013',
     downloadUrl: 'http://vizune.com'
@@ -56,7 +56,7 @@ const styleTwoData = [
   {
     title: 'Render 002: Hyperdimension Neptunia',
     imageDimensions: '1200 x 2200',
-    asset: 'https://placehold.co/768x400.png',
+    asset: 'https://placehold.co/465x262.png',
     fileSize: '2.3 MB',
     publishDate: '14/10/2013',
     downloadUrl: 'http://vizune.com'
@@ -64,7 +64,7 @@ const styleTwoData = [
   {
     title: 'Render 003: Granblue Fantasy',
     imageDimensions: '1300 x 750',
-    asset: 'https://placehold.co/768x400.png',
+    asset: 'https://placehold.co/465x262.png',
     fileSize: '1.75 MB',
     publishDate: '14/10/2013',
     downloadUrl: 'http://vizune.com'
@@ -90,7 +90,7 @@ const styleThreeData = [
     character: 'Chie Satonaka',
     demoUrl: 'http://vizune.com',
     downloadUrl: 'http://vizune.com',
-    asset: 'https://placehold.co/750x375.png',
+    asset: 'https://placehold.co/708x354.png',
   }
 ]
 </script>

@@ -46,7 +46,7 @@ const affiliates = [
 <template>
     <div class="grid grid-cols-3 lg:grid-cols-4 justify-center gap-4 my-6 px-6">
         <a v-for="link in affiliates" :href="link.url" target="_blank">
-            <img :src="link.button" :alt="`Affiliate: ${link.name} button`" class="border-2 border-white hover:border-toadstool" />
+            <img :src="link.button" :alt="`Affiliate: ${link.name} button`" class="border-2 border-white hover:border-toadstool" width="88" height="31" />
         </a>
     </div>
 </template>
