@@ -104,7 +104,7 @@ const styleThreeData = [
         <Navigation />
       </div>
     </div>
-    <div class="bg-white px-4 lg:px-6 pt-12 pb-24 bg-footer-lace bg-bottom bg-repeat-x grow">
+    <div class="bg-white px-4 lg:px-12 pt-12 pb-24 bg-footer-lace bg-bottom bg-repeat-x grow">
       <h1>Inori web template</h1>
       <div class="flex">
         <img src="/avatar.png" alt="Guilty Crown Avatar" class="inline-block mr-2 mb-2 w-[100px] h-[100px]" />
