@@ -39,7 +39,7 @@ const props = defineProps({
 <template>
     <div class="text-left mb-6 flex flex-col h-full">
         <PatternHeading>{{ title }}</PatternHeading>
-        <img :src="asset" class="mb-1" v-if="asset" />
+        <img :src="asset" class="mb-1" v-if="asset" :alt="`Thumbnail of ${title}`" />
         <div class="bg-dark text-white grow flex flex-col gap-1 py-3 px-5 justify-center">
             <p class="mb-0"><strong>Publish Date:</strong> {{ publishDate }}</p>
             <p v-if="category" class="mb-0"><strong>Category:</strong> {{ category }}</p>

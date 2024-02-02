@@ -29,7 +29,7 @@ const props = defineProps({
 <template>
     <div class="text-left flex flex-col mb-3 h-full bg-[#f2f2f2]">
         <h2 class="mb-0 flex flex-col gap-1 pl-4"><span v-for="text in title.split(/: (.*)/s)">{{ text }}</span></h2>
-        <img :src="asset" class="mb-1" v-if="asset" />
+        <img :src="asset" class="mb-1" v-if="asset" :alt="`Thumbnail of ${title}`" />
         <div class="bg-dark text-white gap-1 p-3">
             <p class="mb-0"><strong>Publish Date:</strong> {{ publishDate }}</p>
             <p class="m-0"><strong>Dimensions:</strong> {{ imageDimensions }}</p>
