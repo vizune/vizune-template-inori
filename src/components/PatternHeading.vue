@@ -1,13 +1,21 @@
 <template>
-    <h2 class="text-white bg-dark mb-1 p-3 relative z-10 before:bg-header-pattern">
-        <span class="font-medium uppercase text-xl tracking-wider">
+    <h2 class="pattern-heading">
+        <span>
             <slot />
         </span>
     </h2>
 </template>
 
 <style scoped>
-h2:before {
+.pattern-heading {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 0.25rem;
+    padding: 0.75rem;
+    color: var(--white);
+    background-color: var(--dark);
+}
+.pattern-heading:before {
     content: '';
     display: block;
     width: 100%;
@@ -17,5 +25,13 @@ h2:before {
     top: 0;
     left: 0;
     z-index: -1;
+    background-image: url('/mask.png');
+}
+span {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 </style>

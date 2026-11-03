@@ -51,9 +51,19 @@ const social = [
 </script>
 
 <template>
-    <div class="grid grid-cols-5 gap-8 text-white py-4 px-8">
+    <div class="social">
         <div v-for="item in social">
             <SocialLink :url="item.url" :icon="item.icon" :name="item.name" />
         </div>
     </div>
 </template>
+
+<style scoped>
+.social {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 1rem 2rem;
+    color: var(--white);
+}
+</style>

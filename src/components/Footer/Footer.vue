@@ -6,7 +6,7 @@ import Affiliates from './Affiliates.vue';
 </script>
 
 <template>
-    <footer id="Footer" class="bg-dark w-full grid grid-cols-1 md:grid-cols-2 border-b-4 border-toadstool">
+    <footer id="Footer">
         <Widget heading="Affiliates">
             <Affiliates />
         </Widget>
@@ -15,3 +15,19 @@ import Affiliates from './Affiliates.vue';
         </Widget>
     </footer>
 </template>
+
+<style scoped>
+footer {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    width: 100%;
+    background-color: var(--dark);
+    border-bottom: 4px solid var(--toadstool);
+}
+
+@media (min-width: 768px) {
+    footer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+</style>

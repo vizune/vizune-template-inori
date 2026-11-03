@@ -10,14 +10,13 @@ provide('selectedTitle', selectedTitle)
 
 <template>
     <div class="tabs">
-        <ul class="flex justify-center items-center gap-4 mb-6 list-none flex-col lg:flex-row p-0 md:border-b-4 md:border-stizza lg:px-4">
+        <ul>
             <li
                 v-for="title in tabTitles"
                 :key="title"
                 @click="selectedTitle = title"
-                class="grow w-full lg:w-auto"
             >
-                <button :class="{ active: selectedTitle === title }" class="w-full relative z-10 py-3 text-left">
+                <button :class="{ active: selectedTitle === title }">
                     <span>{{ title }}</span>
                 </button>
             </li>
@@ -27,6 +26,20 @@ provide('selectedTitle', selectedTitle)
 </template>
 
 <style scoped>
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+li {
+    flex-grow: 1;
+    width: 100%;
+}
 button:before {
     content: '';
     display: block;
@@ -39,6 +52,12 @@ button:before {
     z-index: -1;
 }
 button {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    text-align: left;
     background-color: var(--stizza);
     border: 4px solid var(--stizza);
     transform: translateY(4px);
@@ -57,7 +76,20 @@ button.active:hover {
     color: var(--stizza);
 }
 
+@media (min-width: 768px) {
+    ul {
+        border-bottom: 4px solid var(--stizza);
+    }
+}
+
 @media (min-width: 1024px) {
+    ul {
+        flex-direction: row;
+        padding: 0 1rem;
+    }
+    li {
+        width: auto;
+    }
     button {
         transform: translateY(4px);
     }

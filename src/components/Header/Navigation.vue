@@ -41,9 +41,22 @@ const nav = [
 </script>
 
 <template>
-    <nav id="navigation" class="border-b-4 border-stizza">
-        <ul class="flex flex-col list-none p-0">
+    <nav id="navigation">
+        <ul>
             <NavigationLink v-for="item in nav" :page="item.page" :link="item.link" :active="item.active" />
         </ul>
     </nav>
 </template>
+
+<style scoped>
+nav {
+    border-bottom: 4px solid var(--stizza);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+</style>

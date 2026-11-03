@@ -96,21 +96,21 @@ const styleThreeData = [
 </script>
 
 <template>
-  <div class="site-container flex flex-col grow">
-    <div class="flex">
+  <div class="site-container">
+    <div class="site-top">
       <Header />
-      <div class="bg-stizza flex flex-col justify-between w-full max-w-[21.25rem]">
+      <div class="site-sidebar">
         <Logo />
         <Navigation />
       </div>
     </div>
-    <div class="bg-white px-4 lg:px-12 pt-12 pb-24 bg-footer-lace bg-bottom bg-repeat-x grow">
+    <div class="site-main">
       <h1>Inori web template</h1>
-      <div class="flex">
-        <img src="/avatar.png" alt="Guilty Crown Avatar" class="inline-block mr-2 mb-2 w-[100px] h-[100px]" />
+      <div class="intro">
+        <img src="/avatar.png" alt="Guilty Crown Avatar" class="intro-avatar" />
         <div>
           <p>
-            This web template features <em>Inori Yuzuriha from Guilty Crown</em> and was built with Vue, Vite and Tailwind. 
+            This web template features <em>Inori Yuzuriha from Guilty Crown</em> and was built with Vue and Vite. 
             It was originally built in HTML / Bootstrap back in 2015 and you can still check out the <a href="http://vizune.com/demos/templates/inori/" target="_blank">demo</a> 
             and the download <a href="https://github.com/vizune/vizune-template-archive/tree/main/inori" target="_blank">code source from my Github</a>. 
           </p>
@@ -154,11 +154,10 @@ const styleThreeData = [
         <option value="">Filter content...</option>
         <option v-for="item in filters" :key="item" :value="item">{{ item }}</option>
       </FilterDropdown>
-      <p class="text-center mt-6 text-lg font-bold
-      ">{{ filterContent }}</p>
+      <p class="filter-content">{{ filterContent }}</p>
 
       <h2>Post styles</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div class="post-grid post-grid--blog">
         <StyleOne 
           v-for="post in styleOneData"
           :title="post.title"
@@ -170,7 +169,7 @@ const styleThreeData = [
         />
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-8">
+      <div class="post-grid post-grid--downloads">
         <StyleTwo 
           v-for="download in styleTwoData"
           :title="download.title"
@@ -182,7 +181,7 @@ const styleThreeData = [
         />
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mt-8">
+      <div class="post-grid post-grid--templates">
         <StyleThree 
           v-for="template in styleThreeData"
           :title="template.title"
@@ -200,4 +199,78 @@ const styleThreeData = [
     <Footer />
   </div>
 </template>
+
+<style scoped>
+.site-top {
+  display: flex;
+}
+
+.site-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 21.25rem;
+  background-color: var(--stizza);
+}
+
+.site-main {
+  flex-grow: 1;
+  padding: 3rem 1rem 6rem;
+  background: var(--white) url('/lace.png') bottom repeat-x;
+}
+
+.intro {
+  display: flex;
+}
+
+.intro-avatar {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.filter-content {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.post-grid + .post-grid {
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .post-grid--downloads {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-main {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  .post-grid--blog,
+  .post-grid--templates {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .post-grid--downloads {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+</style>
 
