@@ -196,7 +196,9 @@ select {
   margin-left: 0.5rem;
 }
 
+/* Font Awesome icons use currentColor, so they follow the text colour of their parent */
 svg.icon {
+  display: block;
   height: 1.6rem;
   width: 1.5rem;
 }
@@ -204,17 +206,6 @@ svg.icon {
 svg.icon-lg {
   height: 2rem;
   width: 2rem;
-}
-
-button svg.icon,
-.button svg.icon {
-  fill: white;
-}
-
-
-button:hover svg.icon,
-.button:hover svg.icon {
-  fill: var(--stizza);
 }
 
 /* CSS for high-resolution devices */

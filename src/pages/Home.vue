@@ -102,9 +102,8 @@ const styleThreeData = [
         and the download <a href="https://github.com/vizune/vizune-template-archive/tree/main/inori" target="_blank">code source from my Github</a>. 
       </p>
       <p>
-        There are a variety of components available such as Tabs, Select Dropdown and SVG sprite for social icons (I'm planning on writing a tutorial on this topic). 
-        I recommend using an online <a href="https://svg-sprite-generator.vercel.app/" target="_blank">SVG sprite generator</a>, drag and drop all your SVG icons from 
-        <code>src/assets/icons</code> onto the page then paste the code provided into <em>_sprite.svg</em> for safe keeping and update SVG code on index.html too.
+        There are a variety of components available such as Tabs and Select Dropdown, and icons come from <a href="https://fontawesome.com/icons" target="_blank">Font Awesome</a>.
+        To use a new icon, import it in <code>src/icons.js</code>, add it to the list there, then use it anywhere with <code>&lt;FontAwesomeIcon icon="fa-solid fa-name" /&gt;</code>.
       </p>
     </div>
   </div>

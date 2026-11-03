@@ -7,9 +7,7 @@
 </script>
 <template>
     <a :href="url" target="_blank" :title="name" class="social-link">
-        <svg  class="icon icon-lg">
-            <use :xlink:href="`#${icon}`"></use>
-        </svg>
+        <FontAwesomeIcon :icon="icon" class="icon icon-lg" />
     </a>
 </template>
 <style scoped>

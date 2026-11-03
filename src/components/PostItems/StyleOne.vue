@@ -37,9 +37,7 @@ const props = defineProps({
             <router-link :to="`/${category}/${slug}`" class="button">
                 <div class="button-content">
                     <span>Read more</span>
-                    <svg class="icon">
-                        <use xlink:href="#rightArrow"></use>
-                    </svg>
+                    <FontAwesomeIcon icon="fa-solid fa-circle-arrow-right" class="icon" />
                 </div>
             </router-link>
         </div>

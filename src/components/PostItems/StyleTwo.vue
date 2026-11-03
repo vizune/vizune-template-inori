@@ -40,13 +40,9 @@ const props = defineProps({
                 <div class="button-content">
                     <div class="button-label">
                         <span>Download</span>
-                        <svg class="icon" style="height: 1.15rem">
-                            <use xlink:href="#new-tab"></use>
-                        </svg>
+                        <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" class="icon" style="height: 1.15rem" />
                     </div>
-                    <svg class="icon">
-                        <use xlink:href="#download"></use>
-                    </svg>
+                    <FontAwesomeIcon icon="fa-solid fa-download" class="icon" />
                 </div>
             </a>
         </div>

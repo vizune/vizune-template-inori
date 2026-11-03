@@ -4,47 +4,47 @@ import SocialLink from './SocialLink.vue';
 const social = [
     {
         url: "https://github.com/vizune",
-        icon: "github",
+        icon: "fa-brands fa-github",
         name: "Github"
     },
     {
         url: "https://www.deviantart.com/vizune",
-        icon: "deviantart",
+        icon: "fa-brands fa-deviantart",
         name: "Deviant Art"
     },
     {
         url: "https://www.instagram.com/vizune_/",
-        icon: "instagram",
+        icon: "fa-brands fa-instagram",
         name: "Instagram"
     },
     {
         url: "https://www.linkedin.com/in/sasha-r-547a2b57",
-        icon: "linkedin",
+        icon: "fa-brands fa-linkedin",
         name: "LinkedIn"
     },
     {
         url: "https://discordapp.com/users/vizune.",
-        icon: "discord",
+        icon: "fa-brands fa-discord",
         name: "Discord"
     },
     {
         url: "https://www.pinterest.co.uk/vizune/",
-        icon: "pinterest",
+        icon: "fa-brands fa-pinterest",
         name: "Pinterest"
     },
     {
         url: "https://open.spotify.com/user/1149827575",
-        icon: "spotify",
+        icon: "fa-brands fa-spotify",
         name: "Spotify"
     },
     {
         url: "https://steamcommunity.com/id/vizune",
-        icon: "steam",
+        icon: "fa-brands fa-steam",
         name: "Steam"
     },
     {
         url: "https://twitter.com/Vizune_",
-        icon: "twitter",
+        icon: "fa-brands fa-twitter",
         name: "Twitter"
     }
 ]

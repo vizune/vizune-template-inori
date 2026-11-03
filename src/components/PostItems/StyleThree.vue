@@ -51,26 +51,18 @@ const props = defineProps({
                 <div class="button-content">
                     <div class="button-label">
                         <span>Demo</span>
-                        <svg class="icon" style="height: 1.15rem">
-                            <use xlink:href="#new-tab"></use>
-                        </svg>
+                        <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" class="icon" style="height: 1.15rem" />
                     </div>
-                    <svg class="icon">
-                        <use xlink:href="#display"></use>
-                    </svg>
+                    <FontAwesomeIcon icon="fa-solid fa-display" class="icon" />
                 </div>
             </a>
             <a :href="downloadUrl" target="_blank" class="button">
                 <div class="button-content">
                     <div class="button-label">
                         <span>Source code</span>
-                        <svg class="icon" style="height: 1.15rem">
-                            <use xlink:href="#new-tab"></use>
-                        </svg>
+                        <FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" class="icon" style="height: 1.15rem" />
                     </div>
-                    <svg class="icon" style="height: 1.75rem">
-                        <use xlink:href="#code"></use>
-                    </svg>
+                    <FontAwesomeIcon icon="fa-solid fa-code" class="icon" style="height: 1.75rem" />
                 </div>
             </a>
         </div>
