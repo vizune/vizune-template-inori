@@ -1,11 +1,11 @@
 <script setup>
 const props = defineProps({
     title: {
-        type: Object,
+        type: String,
         required: true
     },
     slug: {
-        type: Object,
+        type: String,
         required: true
     },
     thumbnail: {

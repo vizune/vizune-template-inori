@@ -1,19 +1,15 @@
 <script setup>
 const props = defineProps({
     page: String,
-    link: String,
-    active: Boolean
+    link: String
 })
 </script>
 
 <template>
     <li>
-        <a 
-            :href="link" 
-            class="nav-link"
-            :class="{ active }">
+        <RouterLink :to="link" class="nav-link" active-class="active">
             <span>{{ page }}</span>
-        </a>
+        </RouterLink>
     </li>
 </template>
 

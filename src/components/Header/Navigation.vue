@@ -4,38 +4,31 @@ import NavigationLink from './NavigationLink.vue'
 const nav = [
     {
         page: "Blog",
-        link: "/",
-        active: false
+        link: "/"
     },
     {
         page: "About",
-        link: "/about",
-        active: false
+        link: "/about"
     },
     {
         page: "Avatars",
-        link: "/avatars",
-        active: true
+        link: "/avatars"
     },
     {
         page: "Renders",
-        link: "/renders",
-        active: false
+        link: "/renders"
     },
     {
         page: "Templates",
-        link: "/templates",
-        active: false
+        link: "/templates"
     },
     {
         page: "Tutorials",
-        link: "/tutorials",
-        active: false
+        link: "/tutorials"
     },
     {
         page: "PSD Downloads",
-        link: "/psd",
-        active: false
+        link: "/psd"
     }
 ]
 </script>
@@ -43,7 +36,7 @@ const nav = [
 <template>
     <nav id="navigation">
         <ul>
-            <NavigationLink v-for="item in nav" :page="item.page" :link="item.link" :active="item.active" />
+            <NavigationLink v-for="item in nav" :key="item.link" :page="item.page" :link="item.link" />
         </ul>
     </nav>
 </template>
